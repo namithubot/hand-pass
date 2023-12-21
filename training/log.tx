@@ -1,0 +1,44 @@
+﻿Base model (VGG16) + dense + dense
+
+Epoch 1/6
+2023-12-19 22:15:25.728246: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 536870912 exceeds 10% of free system memory.
+2023-12-19 22:15:25.810690: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 536870912 exceeds 10% of free system memory.
+ 1/21 [>.............................] - ETA: 1:01 - loss: 4.4981 - accuracy: 0.21882023-12-19 22:15:27.737304: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 536870912 exceeds 10% of free system memory.
+2023-12-19 22:15:27.804312: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 536870912 exceeds 10% of free system memory.
+ 2/21 [=>............................] - ETA: 39s - loss: 4.8535 - accuracy: 0.2500 2023-12-19 22:15:29.823104: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 536870912 exceeds 10% of free system memory.
+21/21 [==============================] - 56s 3s/step - loss: 1.6775 - accuracy: 0.6466 - val_loss: 0.4584 - val_accuracy: 0.8758
+Epoch 2/6
+21/21 [==============================] - 67s 3s/step - loss: 0.3391 - accuracy: 0.9012 - val_loss: 0.2958 - val_accuracy: 0.9193
+Epoch 3/6
+21/21 [==============================] - 65s 3s/step - loss: 0.1814 - accuracy: 0.9352 - val_loss: 0.3431 - val_accuracy: 0.9068
+Epoch 4/6
+21/21 [==============================] - 66s 3s/step - loss: 0.1358 - accuracy: 0.9583 - val_loss: 0.2774 - val_accuracy: 0.9006
+Epoch 5/6
+21/21 [==============================] - 65s 3s/step - loss: 0.0680 - accuracy: 0.9769 - val_loss: 0.1865 - val_accuracy: 0.9317
+Epoch 6/6
+21/21 [==============================] - 61s 3s/step - loss: 0.0729 - accuracy: 0.9769 - val_loss: 0.1781 - val_accuracy: 0.9255
+
+Base Model (ResNet50) + dense + dense V 
+Epoch 1/5
+21/21 [==============================] - 34s 1s/step - loss: 1.2709 - accuracy: 0.6528 - val_loss: 0.3405 - val_accuracy: 0.8882
+Epoch 2/5
+21/21 [==============================] - 28s 1s/step - loss: 0.2548 - accuracy: 0.9059 - val_loss: 0.1650 - val_accuracy: 0.9503
+Epoch 3/5
+21/21 [==============================] - 27s 1s/step - loss: 0.1514 - accuracy: 0.9429 - val_loss: 0.1289 - val_accuracy: 0.9627
+Epoch 4/5
+21/21 [==============================] - 27s 1s/step - loss: 0.1061 - accuracy: 0.9630 - val_loss: 0.1405 - val_accuracy: 0.9379
+Epoch 5/5
+21/21 [==============================] - 27s 1s/step - loss: 0.0820 - accuracy: 0.9676 - val_loss: 0.1810 - val_accuracy: 0.9379
+1/1 [==============================] - 1s 1s/step
+
+Resnet + dense (800) + dense
+18/18 [==============================] - 41s 2s/step - loss: 1.3805 - accuracy: 0.6067 - val_loss: 0.5759 - val_accuracy: 0.7927
+Epoch 2/5
+18/18 [==============================] - 29s 2s/step - loss: 0.4266 - accuracy: 0.8501 - val_loss: 0.2074 - val_accuracy: 0.9268
+Epoch 3/5
+18/18 [==============================] - 26s 1s/step - loss: 0.1603 - accuracy: 0.9489 - val_loss: 0.1535 - val_accuracy: 0.9390
+Epoch 4/5
+18/18 [==============================] - 28s 2s/step - loss: 0.1206 - accuracy: 0.9612 - val_loss: 0.0742 - val_accuracy: 0.9512
+Epoch 5/5
+18/18 [==============================] - 29s 2s/step - loss: 0.1400 - accuracy: 0.9541 - val_loss: 0.1153 - val_accuracy: 0.9878
+5/5 [==============================] - 9s 1s/step
