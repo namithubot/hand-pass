@@ -80,6 +80,7 @@ def start():
             print('success')
             print(times)
             print(sum(times)/len(times))
+            print(entered_password)
             if isRecording and entered_password != []:
                 password = hash_gesture(''.join(entered_password))
             break
@@ -137,13 +138,14 @@ def open_folder():
     os.startfile(path)
 
 def record():
-    global isRecording, isEntering, mode, password, entered_password, unhashed_password, password_unhashed
+    global isRecording, isEntering, mode, password, entered_password, unhashed_password, password_unhashed, last_gesture
     password = []
     unhashed_password = []
     password_unhashed = []
     mode = 'Rec'
     isRecording = True
     isEntering = False
+    last_gesture = ''
     start()
     if password != '':
         if None != con.execute(f"SELECT 1 FROM user WHERE user = '{username.get()}'").fetchone():
@@ -154,12 +156,13 @@ def record():
     unhashed_password = password_unhashed
 
 def enter():
-    global isRecording, isEntering, mode, password, entered_password, unhashed_password, password_unhashed
+    global isRecording, isEntering, mode, password, entered_password, unhashed_password, password_unhashed, last_gesture
     mode = 'Entering'
     isEntering = True
     isRecording = False
     entered_password = []
     password_unhashed = unhashed_password
+    last_gesture = ''
     password = con.execute(f"SELECT password FROM user WHERE user = '{username.get()}'").fetchone()[0]
     start()
     if password != '' and password == hash_gesture(''.join(entered_password)):
